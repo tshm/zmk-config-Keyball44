@@ -1,5 +1,15 @@
 on: [push, pull_request, workflow_dispatch]
 
 jobs:
+  edit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Remove pointing.h include
+        run: sed -i '/#include <dt-bindings\/zmk\/pointing\.h>/d' config/keyball44.keymap
+      - uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: Remove pointing.h include
   build:
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+    needs: edit
