@@ -12,7 +12,7 @@ layers:
   - I
   - O
   - P
-  - {t: \, s: '|'}
+  - {t: '$$mdi:backspace$$', type: backspace}
   - {t: '$$mdi:keyboard-esc$$', h: NUM}
   - {t: A, h: LWIN}
   - {t: S, h: '$$mdi:apple-keyboard-option$$'}
@@ -41,8 +41,8 @@ layers:
   - $$mdi:apple-keyboard-command$$
   - $$mdi:apple-keyboard-option$$
   - {t: INT MUHENKAN, h: MOUSE}
-  - {t: INT HENKAN, h: SCROLL}
-  - {t: '$$mdi:backspace$$', h: NUM}
+  - {t: '-', h: SCROLL, s: _}
+  - {t: INT HENKAN, h: NUM}
   - {t: '$$mdi:keyboard-space$$', h: SYM}
   - $$mdi:volume-off$$
   NUM:
