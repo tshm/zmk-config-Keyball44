@@ -1,4 +1,8 @@
-on: [push, pull_request, workflow_dispatch]
+on:
+  workflow_run:
+    workflows: ["edit"]
+    types:
+      - completed
 
 jobs:
   build:
