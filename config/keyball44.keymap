@@ -11,6 +11,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/pointing.h>
 
 &lt {
     tapping-term-ms = <240>;
@@ -69,10 +70,10 @@
         default_layer {
             label = "QWRT";
             bindings = <
-&kp TAB         &kp Q         &kp W         &kp E               &kp R             &kp T                       &kp Y        &kp U        &kp I         &kp O       &kp P          &kp BACKSLASH
-&lt 1 ESCAPE    &mt LWIN A    &mt LALT S    &mt LSHFT D         &mt LCTRL F       &kp G                       &kp H        &mt RCTRL J  &mt RSHIFT K  &mt RALT L  &mt RWIN SEMI  &kp ENTER
-&kp LEFT_SHIFT  &kp Z         &kp X         &kp C               &kp V             &kp B                       &kp N        &kp M        &kp COMMA     &kp DOT     &kp SLASH      &kp RIGHT_SHIFT
-&kp LCTRL       &kp LEFT_GUI  &kp LEFT_ALT  &lt 4 INT_MUHENKAN  &lt 5 INT_HENKAN             &lt 1 BACKSPACE  &lt 2 SPACE                                                        &kp C_MUTE
+&kp TAB         &kp Q         &kp W         &kp E               &kp R        &kp T                        &kp Y        &kp U        &kp I         &kp O       &kp P          &kp BACKSPACE
+&lt 1 ESCAPE    &mt LWIN A    &mt LALT S    &mt LSHFT D         &mt LCTRL F  &kp G                        &kp H        &mt RCTRL J  &mt RSHIFT K  &mt RALT L  &mt RWIN SEMI  &kp ENTER
+&kp LEFT_SHIFT  &kp Z         &kp X         &kp C               &kp V        &kp B                        &kp N        &kp M        &kp COMMA     &kp DOT     &kp SLASH      &kp RIGHT_SHIFT
+&kp LCTRL       &kp LEFT_GUI  &kp LEFT_ALT  &lt 4 INT_MUHENKAN  &lt 5 MINUS             &lt 1 INT_HENKAN  &lt 2 SPACE                                                        &kp C_MUTE
             >;
         };
 
@@ -102,7 +103,7 @@
 &none   &kp F1      &kp F2        &kp F3        &kp F4        &kp F5             &kp F6      &kp F7        &kp F8        &kp F9  &kp F10  &kp F11
 &none   &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &none              &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &none   &none    &kp F12
 &none   &none       &none         &none         &none         &none              &none       &none         &none         &none   &none    &trans
-&trans  &trans      &trans        &trans        &trans                    &mo 3  &trans      &none
+&trans  &trans      &trans        &trans        &trans                    &mo 3  &trans                                                   &none
             >;
         };
 
