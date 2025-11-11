@@ -1,3 +1,4 @@
+name: edit
 on:
   push:
     paths: ['config/keyball44.keymap']
