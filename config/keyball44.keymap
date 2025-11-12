@@ -11,6 +11,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/pointing.h>
 
 &lt {
     tapping-term-ms = <240>;
@@ -79,10 +80,10 @@
         number_layer {
             label = "NUM";
             bindings = <
-&none   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5              &kp NUMBER_6    &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0   &none
-&none   &none         &none         &kp LANG2     &kp LANG1     &kp HOME                  &kp LEFT_ARROW  &kp DOWN      &kp UP        &kp RIGHT     &kp PAGE_UP    &none
-&none   &none         &none         &none         &none         &kp END                   &none           &none         &trans        &trans        &kp PAGE_DOWN  &none
-&trans  &trans        &trans        &trans        &trans                          &trans  &trans                                                                   &trans
+&none   &kp NUMBER_1     &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5              &kp NUMBER_6    &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0   &none
+&none   &kp PRINTSCREEN  &kp C_MUTE    &kp LANG2     &kp LANG1     &kp HOME                  &kp LEFT_ARROW  &kp DOWN      &kp UP        &kp RIGHT     &kp PAGE_UP    &none
+&none   &none            &none         &none         &none         &kp END                   &none           &none         &trans        &trans        &kp PAGE_DOWN  &none
+&trans  &trans           &trans        &trans        &trans                          &trans  &trans                                                                   &trans
             >;
         };
 
