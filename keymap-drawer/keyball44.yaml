@@ -102,7 +102,7 @@ layers:
   - '*'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - INT YEN
-  - $$mdi:progress-download$$
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -271,7 +271,7 @@ layers:
   - {t: QWRT, h: toggle}
   - {t: QWRT, h: toggle}
   SNIPE:
-  - $$mdi:progress-download$$
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
