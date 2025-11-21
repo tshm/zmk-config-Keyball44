@@ -41,8 +41,8 @@ layers:
   - $$mdi:apple-keyboard-command$$
   - $$mdi:apple-keyboard-option$$
   - {t: '$$mdi:keyboard-esc$$', h: MOUSE}
-  - {t: '-', h: SCROLL, s: _}
-  - {t: '$$mdi:keyboard-return$$', h: SYM}
+  - {t: LANG2, h: SCROLL}
+  - {t: LANG1, h: SYM}
   - {t: '$$mdi:keyboard-space$$', h: NUM}
   - {t: MOUSE, h: toggle}
   NUM:
