@@ -271,7 +271,7 @@ layers:
   - {t: QWRT, h: toggle}
   - {t: QWRT, h: toggle}
   SNIPE:
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
