@@ -11,6 +11,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/pointing.h>
 
 &lt {
     tapping-term-ms = <240>;
@@ -59,7 +60,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&to 4>, <&to 3>;
+            bindings = <&tog 4>, <&tog 3>;
         };
     };
 
@@ -85,7 +86,7 @@
             bindings = <
 &kp TAB       &kp Q         &kp W         &kp E         &kp R        &kp T                   &kp Y        &kp U        &kp I         &kp O       &kp P          &kp BACKSPACE
 &lt 1 ESCAPE  &mt LWIN A    &mt LALT S    &mt LSHFT D   &mt LCTRL F  &kp G                   &kp H        &mt RCTRL J  &mt RSHIFT K  &mt RALT L  &mt RWIN SEMI  &kp ENTER
-&SHIFT        &kp Z         &kp X         &kp C         &kp V        &kp B                   &kp N        &kp M        &kp COMMA     &kp DOT     &kp SLASH      &kp RIGHT_SHIFT
+&SHIFT        &kp Z         &kp X         &kp C         &kp V        &kp B                   &kp N        &kp M        &kp COMMA     &kp DOT     &kp SLASH      &SHIFT
 &kp LCTRL     &kp LEFT_GUI  &kp LEFT_ALT  &lt 4 ESCAPE  &lt 5 LANG2             &lt 2 LANG1  &lt 1 SPACE                                                        &td_lay34
             >;
         };
