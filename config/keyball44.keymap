@@ -11,6 +11,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/pointing.h>
 
 &lt {
     tapping-term-ms = <240>;
@@ -48,9 +49,9 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        SHIFT: SHIFTxxxx {
+        SHIFT: SHIFT {
             compatible = "zmk,behavior-tap-dance";
-            label = "SHIFTaaaa";
+            label = "SHIFT";
             #binding-cells = <0>;
             bindings = <&kp LEFT_SHIFT>, <&caps_word>;
         };
@@ -79,7 +80,7 @@
 &kp TAB       &kp Q         &kp W         &kp E         &kp R        &kp T                   &kp Y        &kp U        &kp I         &kp O       &kp P          &kp BACKSPACE
 &lt 1 ESCAPE  &mt LWIN A    &mt LALT S    &mt LSHFT D   &mt LCTRL F  &kp G                   &kp H        &mt RCTRL J  &mt RSHIFT K  &mt RALT L  &mt RWIN SEMI  &kp ENTER
 &SHIFT        &kp Z         &kp X         &kp C         &kp V        &kp B                   &kp N        &kp M        &kp COMMA     &kp DOT     &kp SLASH      &kp RIGHT_SHIFT
-&kp LCTRL     &kp LEFT_GUI  &kp LEFT_ALT  &lt 4 ESCAPE  &lt 5 LANG2             &lt 2 LANG1  &lt 1 SPACE                                                        &tog 4
+&kp LCTRL     &kp LEFT_GUI  &kp LEFT_ALT  &lt 4 ESCAPE  &lt 5 LANG2             &lt 2 LANG1  &lt 1 SPACE                                                        &to 4
             >;
         };
 
