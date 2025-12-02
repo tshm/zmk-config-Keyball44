@@ -205,7 +205,7 @@ layers:
   - $$mdi:mouse-right-click-outline$$
   - $$mdi:mouse-scroll-wheel$$
   - {t: QWRT, h: toggle}
-  - {t: QWRT, h: toggle}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: QWRT, h: toggle}
   - {t: QWRT, h: toggle}
   - {t: QWRT, h: toggle}
@@ -216,60 +216,60 @@ layers:
   - PG DN
   - {t: QWRT, h: toggle}
   - {t: QWRT, h: toggle}
-  - {t: QWRT, h: toggle}
-  - {t: QWRT, h: toggle}
-  - {t: QWRT, h: toggle}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: held}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: QWRT, h: toggle}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   SCROLL:
-  - {t: QWRT, h: toggle}
-  - {t: QWRT, h: toggle}
-  - {t: QWRT, h: toggle}
-  - {t: QWRT, h: toggle}
-  - {t: QWRT, h: toggle}
-  - {t: QWRT, h: toggle}
-  - {t: QWRT, h: toggle}
-  - {t: QWRT, h: toggle}
-  - {t: QWRT, h: toggle}
-  - {t: QWRT, h: toggle}
-  - {t: QWRT, h: toggle}
-  - {t: QWRT, h: toggle}
-  - {t: QWRT, h: toggle}
-  - {t: QWRT, h: toggle}
-  - {t: QWRT, h: toggle}
-  - {t: QWRT, h: toggle}
-  - {t: QWRT, h: toggle}
-  - {t: QWRT, h: toggle}
-  - {t: QWRT, h: toggle}
-  - {t: QWRT, h: toggle}
-  - {t: QWRT, h: toggle, type: held alternate}
-  - {t: QWRT, h: toggle}
-  - {t: QWRT, h: toggle}
-  - {t: QWRT, h: toggle}
-  - {t: QWRT, h: toggle}
-  - {t: QWRT, h: toggle}
-  - {t: QWRT, h: toggle}
-  - {t: QWRT, h: toggle}
-  - {t: QWRT, h: toggle}
-  - {t: QWRT, h: toggle}
-  - {t: QWRT, h: toggle}
-  - {t: QWRT, h: toggle}
-  - {t: QWRT, h: toggle}
-  - {t: QWRT, h: toggle}
-  - {t: QWRT, h: toggle}
-  - {t: QWRT, h: toggle}
-  - {t: QWRT, h: toggle}
-  - {t: QWRT, h: toggle}
-  - {t: QWRT, h: toggle}
-  - {t: QWRT, h: toggle, type: held alternate}
-  - {t: QWRT, h: toggle, type: held}
-  - {t: QWRT, h: toggle}
-  - {t: QWRT, h: toggle}
-  - {t: QWRT, h: toggle}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held alternate}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held alternate}
+  - {type: held}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   SNIPE:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
