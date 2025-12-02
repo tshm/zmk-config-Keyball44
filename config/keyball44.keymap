@@ -125,18 +125,18 @@
             bindings = <
 &to 0  &to 0  &to 0  &to 0  &to 0  &to 0             &to 0  &to 0      &to 0        &to 0      &to 0      &to 0
 &to 0  &to 0  &to 0  &to 0  &to 0  &to 0             &to 0  &mkp LCLK  &lt 5 PG_UP  &mkp RCLK  &mkp MCLK  &to 0
-&to 0  &to 0  &to 0  &to 0  &to 0  &to 0             &to 0  &to 0      &kp PG_DN    &to 0      &to 0      &to 0
-&to 0  &to 0  &none  &none  &none             &none  &none                                                &to 0
+&trans  &to 0  &to 0  &to 0  &to 0  &to 0             &to 0  &to 0      &kp PG_DN    &to 0      &to 0      &trans
+&trans  &trans  &trans  &trans  &trans             &trans  &trans                              &trans
             >;
         };
 
         scroll_layer {
             label = "SCROLL";
             bindings = <
-&to 0  &to 0  &to 0  &to 0  &to 0  &to 0             &to 0  &to 0  &to 0  &to 0  &to 0  &to 0
-&to 0  &to 0  &to 0  &to 0  &to 0  &to 0             &to 0  &to 0  &to 0  &to 0  &to 0  &to 0
-&to 0  &to 0  &to 0  &to 0  &to 0  &to 0             &to 0  &to 0  &to 0  &to 0  &to 0  &to 0
-&to 0  &to 0  &to 0  &to 0  &to 0             &to 0  &to 0                              &to 0
+&trans  &trans  &trans  &trans  &trans  &trans             &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans             &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans             &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans             &trans  &trans                              &trans
             >;
         };
 
