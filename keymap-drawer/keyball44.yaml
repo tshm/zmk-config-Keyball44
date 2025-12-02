@@ -44,7 +44,7 @@ layers:
   - {t: LANG2, h: SCROLL}
   - {t: LANG1, h: SYM}
   - {t: '$$mdi:keyboard-space$$', h: NUM}
-  - {t: MOUSE, h: toggle}
+  - '&td_lay34'
   NUM:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - '1'
