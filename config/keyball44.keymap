@@ -11,6 +11,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/pointing.h>
 
 &lt {
     tapping-term-ms = <240>;
@@ -76,20 +77,20 @@
         default_layer {
             label = "QWRT";
             bindings = <
-&kp TAB         &kp Q         &kp W         &kp E         &kp R        &kp T                   &kp Y        &kp U        &kp I         &kp O       &kp P          &kp BACKSPACE
-&lt 1 ESCAPE    &mt LWIN A    &mt LALT S    &mt LSHFT D   &mt LCTRL F  &kp G                   &kp H        &mt RCTRL J  &mt RSHIFT K  &mt RALT L  &mt RWIN SEMI  &kp ENTER
-&kp LEFT_SHIFT  &kp Z         &kp X         &kp C         &kp V        &kp B                   &kp N        &kp M        &kp COMMA     &kp DOT     &kp SLASH      &kp RIGHT_SHIFT
-&kp LCTRL       &kp LEFT_GUI  &kp LEFT_ALT  &lt 4 ESCAPE  &lt 5 LANG2             &lt 2 LANG1  &lt 1 SPACE                                                        &tog 4
+&kp TAB       &kp Q         &kp W         &kp E         &kp R        &kp T                   &kp Y        &kp U        &kp I         &kp O       &kp P          &kp BACKSPACE
+&lt 1 ESCAPE  &mt LWIN A    &mt LALT S    &mt LSHFT D   &mt LCTRL F  &kp G                   &kp H        &mt RCTRL J  &mt RSHIFT K  &mt RALT L  &mt RWIN SEMI  &kp ENTER
+&SHIFT        &kp Z         &kp X         &kp C         &kp V        &kp B                   &kp N        &kp M        &kp COMMA     &kp DOT     &kp SLASH      &kp RIGHT_SHIFT
+&kp LCTRL     &kp LEFT_GUI  &kp LEFT_ALT  &lt 4 ESCAPE  &lt 5 LANG2             &lt 2 LANG1  &lt 1 SPACE                                                        &tog 4
             >;
         };
 
         number_layer {
             label = "NUM";
             bindings = <
-&none   &kp NUMBER_1     &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5              &kp NUMBER_6    &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &kp DEL
-&none   &kp PRINTSCREEN  &none         &kp LANG2     &kp LANG1     &kp HOME                  &kp LEFT_ARROW  &kp DOWN      &kp UP        &kp RIGHT     &kp MINUS     &kp EQUAL
-&none   &none            &none         &none         &none         &kp END                   &none           &kp PG_DN     &kp PG_UP     &kp PERIOD    &trans        &none
-&trans  &trans           &trans        &trans        &trans                          &trans  &trans                                                                  &trans
+&none   &kp NUMBER_1     &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5              &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &kp DEL
+&none   &kp PRINTSCREEN  &none         &kp LANG2     &kp LANG1     &kp HOME                  &kp LEFT      &kp DOWN      &kp UP        &kp RIGHT     &kp MINUS     &kp EQUAL
+&none   &none            &none         &none         &none         &kp END                   &none         &kp PG_DN     &kp PG_UP     &kp PERIOD    &trans        &none
+&trans  &trans           &trans        &trans        &trans                          &trans  &trans                                                                &trans
             >;
         };
 
