@@ -46,7 +46,7 @@ layers:
   - {t: '$$mdi:keyboard-space$$', h: NUM}
   - '&td_lay34'
   NUM:
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - '~'
   - '1'
   - '2'
   - '3'
