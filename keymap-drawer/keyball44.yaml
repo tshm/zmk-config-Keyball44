@@ -80,7 +80,7 @@ layers:
   - PG DN
   - PG UP
   - .
-  - {t: '$$mdi:transfer$$', type: trans}
+  - '|'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
