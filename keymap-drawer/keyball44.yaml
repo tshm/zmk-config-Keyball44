@@ -44,7 +44,7 @@ layers:
   - {t: LANG2, h: SCROLL}
   - {t: LANG1, h: SYM}
   - {t: '$$mdi:keyboard-space$$', h: NUM}
-  - '&td_lay34'
+  - $$mdi:apple-keyboard-option$$
   NUM:
   - '~'
   - '1'
