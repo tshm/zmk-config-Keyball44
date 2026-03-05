@@ -4,18 +4,21 @@
 # control, add individual board + shield combinations to
 # the `include` property, e.g:
 #
-# board: [ "nice_nano_v2" ]
+# board: [ "nice_nano@2.0.0//zmk" ]
 # shield: [ "corne_left", "corne_right" ]
 # include:
-#   - board: bdn9_rev2
-#   - board: nice_nano_v2
+#   - board: bdn9//zmk
+#   - board: nice_nano@2.0.0//zmk
 #     shield: reviung41
 #
 ---
 include:
-  - board: nice_nano_v2
+  - board: nice_nano@2.0.0//zmk
     shield: keyball44_left
-  - board: nice_nano_v2
+    artifact-name: keyball44_left-nice_nano_v2-zmk
+  - board: nice_nano@2.0.0//zmk
     shield: keyball44_right
-  - board: nice_nano_v2
+    artifact-name: keyball44_right-nice_nano_v2-zmk
+  - board: nice_nano@2.0.0//zmk
     shield: settings_reset
+    artifact-name: settings_reset-nice_nano_v2-zmk
