@@ -59,10 +59,10 @@ layers:
   - '0'
   - $$mdi:backspace-reverse-outline$$
   - {t: '$$mdi:minus-circle-outline$$', type: held}
-  - PRINTSCREEN
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - LANG2
-  - LANG1
+  - +
+  - '*'
+  - {t: /, s: '?'}
+  - {t: '=', s: +}
   - HOME
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
