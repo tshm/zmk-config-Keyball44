@@ -320,3 +320,5 @@ combos:
   k: $$mdi:progress-download$$
 - p: [0, 1]
   k: $$mdi:progress-download$$
+- p: [34, 43]
+  k: Alt+Gui+K
