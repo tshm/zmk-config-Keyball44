@@ -316,11 +316,9 @@ layers:
   - $$mdi:mouse-left-click-outline$$
   - {t: '$$mdi:transfer$$', type: trans}
 combos:
-- p: [10, 11]
+- p: [10, 11, 9]
   k: $$mdi:progress-download$$
-- p: [0, 1]
+- p: [0, 1, 2]
   k: $$mdi:progress-download$$
-- p: [34, 43]
+- p: [35, 23]
   k: Alt+Gui+K
-- p: [42, 30]
-  k: Ctl+Alt+C
