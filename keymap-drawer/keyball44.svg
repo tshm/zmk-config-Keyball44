@@ -542,9 +542,9 @@ rect.held, rect.combo.held {
 </text>
 </g>
 <g class="combo combopos-3">
-<rect rx="6" ry="6" x="798" y="183" width="28" height="26" class="combo"/>
-<text x="812" y="196" class="combo tap">
-<tspan x="812" dy="-0.6em">Ctl+</tspan><tspan x="812" dy="1.2em">Alt+C</tspan>
+<rect rx="6" ry="6" x="530" y="195" width="28" height="26" class="combo"/>
+<text x="544" y="208" class="combo tap">
+<tspan x="544" dy="-0.6em">Ctl+</tspan><tspan x="544" dy="1.2em">Alt+C</tspan>
 </text>
 </g>
 </g>
@@ -793,9 +793,9 @@ rect.held, rect.combo.held {
 </text>
 </g>
 <g class="combo combopos-3">
-<rect rx="6" ry="6" x="798" y="183" width="28" height="26" class="combo"/>
-<text x="812" y="196" class="combo tap">
-<tspan x="812" dy="-0.6em">Ctl+</tspan><tspan x="812" dy="1.2em">Alt+C</tspan>
+<rect rx="6" ry="6" x="530" y="195" width="28" height="26" class="combo"/>
+<text x="544" y="208" class="combo tap">
+<tspan x="544" dy="-0.6em">Ctl+</tspan><tspan x="544" dy="1.2em">Alt+C</tspan>
 </text>
 </g>
 </g>
@@ -1050,9 +1050,9 @@ rect.held, rect.combo.held {
 </text>
 </g>
 <g class="combo combopos-3">
-<rect rx="6" ry="6" x="798" y="183" width="28" height="26" class="combo"/>
-<text x="812" y="196" class="combo tap">
-<tspan x="812" dy="-0.6em">Ctl+</tspan><tspan x="812" dy="1.2em">Alt+C</tspan>
+<rect rx="6" ry="6" x="530" y="195" width="28" height="26" class="combo"/>
+<text x="544" y="208" class="combo tap">
+<tspan x="544" dy="-0.6em">Ctl+</tspan><tspan x="544" dy="1.2em">Alt+C</tspan>
 </text>
 </g>
 </g>
@@ -1304,9 +1304,9 @@ rect.held, rect.combo.held {
 </text>
 </g>
 <g class="combo combopos-3">
-<rect rx="6" ry="6" x="798" y="183" width="28" height="26" class="combo"/>
-<text x="812" y="196" class="combo tap">
-<tspan x="812" dy="-0.6em">Ctl+</tspan><tspan x="812" dy="1.2em">Alt+C</tspan>
+<rect rx="6" ry="6" x="530" y="195" width="28" height="26" class="combo"/>
+<text x="544" y="208" class="combo tap">
+<tspan x="544" dy="-0.6em">Ctl+</tspan><tspan x="544" dy="1.2em">Alt+C</tspan>
 </text>
 </g>
 </g>
@@ -1641,9 +1641,9 @@ rect.held, rect.combo.held {
 </text>
 </g>
 <g class="combo combopos-3">
-<rect rx="6" ry="6" x="798" y="183" width="28" height="26" class="combo"/>
-<text x="812" y="196" class="combo tap">
-<tspan x="812" dy="-0.6em">Ctl+</tspan><tspan x="812" dy="1.2em">Alt+C</tspan>
+<rect rx="6" ry="6" x="530" y="195" width="28" height="26" class="combo"/>
+<text x="544" y="208" class="combo tap">
+<tspan x="544" dy="-0.6em">Ctl+</tspan><tspan x="544" dy="1.2em">Alt+C</tspan>
 </text>
 </g>
 </g>
@@ -1883,9 +1883,9 @@ rect.held, rect.combo.held {
 </text>
 </g>
 <g class="combo combopos-3">
-<rect rx="6" ry="6" x="798" y="183" width="28" height="26" class="combo"/>
-<text x="812" y="196" class="combo tap">
-<tspan x="812" dy="-0.6em">Ctl+</tspan><tspan x="812" dy="1.2em">Alt+C</tspan>
+<rect rx="6" ry="6" x="530" y="195" width="28" height="26" class="combo"/>
+<text x="544" y="208" class="combo tap">
+<tspan x="544" dy="-0.6em">Ctl+</tspan><tspan x="544" dy="1.2em">Alt+C</tspan>
 </text>
 </g>
 </g>
@@ -2125,9 +2125,9 @@ rect.held, rect.combo.held {
 </text>
 </g>
 <g class="combo combopos-3">
-<rect rx="6" ry="6" x="798" y="183" width="28" height="26" class="combo"/>
-<text x="812" y="196" class="combo tap">
-<tspan x="812" dy="-0.6em">Ctl+</tspan><tspan x="812" dy="1.2em">Alt+C</tspan>
+<rect rx="6" ry="6" x="530" y="195" width="28" height="26" class="combo"/>
+<text x="544" y="208" class="combo tap">
+<tspan x="544" dy="-0.6em">Ctl+</tspan><tspan x="544" dy="1.2em">Alt+C</tspan>
 </text>
 </g>
 </g>

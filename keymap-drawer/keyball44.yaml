@@ -322,5 +322,5 @@ combos:
   k: $$mdi:progress-download$$
 - p: [34, 43]
   k: Alt+Gui+K
-- p: [43, 35]
+- p: [42, 30]
   k: Ctl+Alt+C
