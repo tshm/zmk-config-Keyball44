@@ -12,6 +12,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/pointing.h>
 
 &lt {
     tapping-term-ms = <240>;
@@ -145,22 +146,17 @@
 
         default_bootloader_r {
             bindings = <&bootloader>;
-            key-positions = <10 11>;
+            key-positions = <10 11 9>;
         };
 
         default_bootloader_l {
             bindings = <&bootloader>;
-            key-positions = <0 1>;
+            key-positions = <0 1 2>;
         };
 
-        mute {
+        mic_mute {
             bindings = <&kp LA(LG(K))>;
-            key-positions = <34 43>;
-        };
-
-        dictate {
-            bindings = <&kp LC(LA(C))>;
-            key-positions = <42 30>;
+            key-positions = <35 43>;
         };
     };
 
