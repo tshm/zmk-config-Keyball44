@@ -44,7 +44,7 @@ layers:
   - {t: LANG2, h: SCROLL}
   - {t: LANG1, h: SYM}
   - {t: '$$mdi:keyboard-space$$', h: NUM}
-  - Ctl+Gui+Q
+  - Ctl+Alt+G
   NUM:
   - '~'
   - '1'
