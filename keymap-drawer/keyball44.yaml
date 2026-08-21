@@ -44,7 +44,7 @@ layers:
   - {t: LANG2, h: SCROLL}
   - {t: LANG1, h: SYM}
   - {t: '$$mdi:keyboard-space$$', h: NUM}
-  - $$mdi:apple-keyboard-option$$
+  - Ctl+Gui+Q
   NUM:
   - '~'
   - '1'
