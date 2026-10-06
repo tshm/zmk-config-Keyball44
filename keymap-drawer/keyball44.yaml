@@ -113,7 +113,7 @@ layers:
   - {t: '=', s: +}
   - {t: '[', s: '{'}
   - {t: ']', s: '}'}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - +
   - {t: '''', s: '"'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -122,9 +122,9 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:bluetooth-off$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - HOME
+  - END
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {h: '$$mdi:arrow-up-bold$$', s: '$$mdi:bluetooth-connect$$'}
-  - {h: '$$mdi:arrow-down-bold$$', s: '$$mdi:bluetooth-connect$$'}
   - {t: \, s: '|'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
