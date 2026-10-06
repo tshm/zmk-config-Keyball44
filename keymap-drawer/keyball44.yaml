@@ -59,10 +59,10 @@ layers:
   - '0'
   - $$mdi:backspace-reverse-outline$$
   - {t: '$$mdi:minus-circle-outline$$', type: held}
-  - +
-  - '*'
-  - {t: /, s: '?'}
-  - {t: '=', s: +}
+  - {h: '1', s: '$$mdi:bluetooth-connect$$'}
+  - {h: '2', s: '$$mdi:bluetooth-connect$$'}
+  - {h: '3', s: '$$mdi:bluetooth-connect$$'}
+  - {h: '4', s: '$$mdi:bluetooth-connect$$'}
   - HOME
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
