@@ -41,6 +41,13 @@ These are preset reset button for keyball44 wireless to replace the harder-to-re
 3. If you want to make sure flawless connection, you can plug in cable to right and use as wired mode. Left doesnt need to plug in wire and remains wireless.
 4. If you want to keep your battery healthy yet want to make sure flawless connection, you can flip the power button off and plug in cable to right. This makes sure the board is using in wired mode but doesnt always charge the battery.
 
+### Sleep and Wake
+
+- Each half enters deep sleep after 15 minutes without activity while USB is disconnected.
+- The key matrix is a wake source on both halves. Press a key on each half to wake both; a sleeping half cannot be woken by the other half over Bluetooth.
+- Flash **both halves** when updating sleep/wake hardware configuration, not just the right-hand central.
+- To verify, disconnect USB from both halves, leave them idle for over 15 minutes, then press keys on each half and confirm wireless input resumes without reconnecting USB.
+
 ### Switch Installation
 
 1. Please note that thumb area switch is upside down compare to the other zones.
