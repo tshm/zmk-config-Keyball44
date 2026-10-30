@@ -12,6 +12,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/pointing.h>
 
 &lt {
     tapping-term-ms = <240>;
@@ -49,9 +50,9 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        SHIFT: SHIFT {
+        SHIFTL: SHIFTL {
             compatible = "zmk,behavior-tap-dance";
-            label = "SHIFT";
+            label = "SHIFTL";
             #binding-cells = <0>;
             bindings = <&kp LEFT_SHIFT>, <&caps_word>;
         };
@@ -138,6 +139,13 @@
             quick-tap-ms = <200>;
             flavor = "balanced";
         };
+
+        SHIFTR: SHIFTR {
+            compatible = "zmk,behavior-tap-dance";
+            label = "SHIFTR";
+            #binding-cells = <0>;
+            bindings = <&kp RIGHT_SHIFT>, <&caps_word>;
+        };
     };
 
     combos {
@@ -170,7 +178,7 @@
             bindings = <
 &kp TAB       &kp Q         &kp W         &kp E         &kp R        &kp T                   &kp Y        &kp U        &kp I         &kp O       &kp P          &kp BACKSPACE
 &lt 1 ESCAPE  &mt LWIN A    &mt LALT S    &mt LSHFT D   &mt LCTRL F  &kp G                   &kp H        &mt RCTRL J  &mt RSHIFT K  &mt RALT L  &mt RWIN SEMI  &kp ENTER
-&SHIFT        &kp Z         &kp X         &kp C         &kp V        &kp B                   &kp N        &kp M        &kp COMMA     &kp DOT     &kp SLASH      &SHIFT
+&SHIFTL       &kp Z         &kp X         &kp C         &kp V        &kp B                   &kp N        &kp M        &kp COMMA     &kp DOT     &kp SLASH      &SHIFTR
 &kp LCTRL     &kp LEFT_GUI  &kp LEFT_ALT  &lt 4 ESCAPE  &lt 5 LANG2             &lt 2 LANG1  &lt 1 SPACE                                                        &kp LC(LA(G))
             >;
         };
