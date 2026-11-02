@@ -4,7 +4,7 @@
 
 # Ownership
 
-- `keyball44.dtsi`: shared matrix transform, row pins, I2C bus, and SSD1306 OLED.
+- `keyball44.dtsi`: shared 44-key physical layout, matrix transform, row pins, I2C bus, and SSD1306 OLED.
 - Side overlays: column pins and right-side PMW3610 SPI device.
 - Side `.conf` files: side-specific firmware options.
 - Kconfig files and `keyball44.zmk.yml`: shield discovery, split roles, and display defaults.
@@ -16,10 +16,12 @@
 - Trackball layers are mouse 4, scroll 5, and snipe 6; keep them aligned with the keymap.
 - Battery sensing is inherited from the controller board, not defined by these overlays.
 - Keep `wakeup-source` on the shared `kscan0` matrix so keys can wake each half from idle deep sleep.
+- The selected physical layout owns the scanner and matrix transform; do not restore a chosen matrix-transform property. Physical attributes follow keymap binding order, with coordinates and angles in hundredths.
 
 # Work Guidance
 
 - Preserve physical pin assignments unless the hardware change is confirmed.
+- Keep firmware physical attributes and `config/keyball44.json` geometry equivalent. Rotated thumb keys use their own nonzero center as `rx`/`ry`; the deployed Studio renderer treats zero origins as missing and otherwise displaces those keys.
 
 # Verification
 

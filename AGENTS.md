@@ -78,6 +78,12 @@ Default section order:
 
 When the user requests a durable behavior change, record it here or in the relevant child AGENTS.md
 
+## Build Contract
+
+- `make` uses Podman to build right, left, and settings-reset UF2s under `build/`; manifest changes refresh west dependencies automatically.
+- `make west-update` explicitly refreshes dependencies. Firmware rebuilds are pristine when inputs change; unchanged builds are skipped.
+- Studio USB transport and `CONFIG_ZMK_STUDIO` apply only to the right central in both local builds and `build.yaml`.
+
 ## Child DOX Index
 
 - Root owns `README.md`, `Makefile`, `build.yaml`, `keymap_drawer.config.yaml`, and repository-wide tooling settings.

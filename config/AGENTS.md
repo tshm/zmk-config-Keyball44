@@ -6,15 +6,21 @@
 
 - `keyball44.keymap`: key behaviors and seven layers.
 - `keyball44.conf`: settings shared by both halves.
-- `west.yml`: ZMK pointer branch and PMW3610 driver dependencies.
+- `west.yml`: pinned upstream ZMK v0.3.0 and PMW3610 driver dependencies.
 - `keyball44.json`: physical layout for keymap tooling.
 
 # Local Contracts
 
 - Right is the central/host-connected half; left is the peripheral.
 - Both halves target nice!nano v2 in the root build matrix.
+- USB Studio is enabled only on the right central; custom behaviors and trackball configuration remain firmware-defined.
 - Battery fetching and proxying are already enabled in `keyball44.conf`; these expose the left battery to the host, not a second local OLED battery widget.
 - Keep `dt-bindings/zmk/pointing.h` out of the keymap; the editor workflow removes that obsolete include.
+
+## Studio Migration Invariants
+
+- Keep the seven layers in this order: `DEFAULT`, `NUM`, `SYM`, `FUN`, `MOUSE`, `SCROLL`, `SNIPE`; the pointer driver uses the fixed `MOUSE`/`SCROLL`/`SNIPE` indices.
+- Preserve the right top bootloader combo at positions `10 11 9`; the right second-row combo at positions `21 22 23` is reserved for `&studio_unlock`.
 
 # Work Guidance
 

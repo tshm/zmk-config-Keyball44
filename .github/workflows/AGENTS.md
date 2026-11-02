@@ -5,7 +5,7 @@
 # Ownership
 
 - `edit.yml`: removes the obsolete pointing header after keymap changes.
-- `build.yml`: manual build or build after the edit workflow completes; delegates to ZMK v0.3 with the root build matrix.
+- `build.yml`: manual build or build after the edit workflow completes; delegates to the pinned ZMK v0.3.0 workflow with the root build matrix.
 - `keymap_drawer.yml`: generates diagram assets using the root drawer configuration.
 - `opencode.yml`: comment-triggered assistant integration.
 
