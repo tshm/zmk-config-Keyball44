@@ -1,14 +1,30 @@
-all: .west/config ./build/firmware_right.uf2 ./build/firmware_left.uf2
+CONFIG_FILES := $(shell find config -type f)
+IMG := zmkfirmware/zmk-build-arm:stable
+PODMAN := podman run --rm --userns=keep-id -v "$(CURDIR):/workspace:Z" -w /workspace $(IMG)
+BUILD := $(PODMAN) west build -p always -s zmk/app -b nice_nano_v2
 
-img:=zmkfirmware/zmk-build-arm:stable
-setup_cmd:=podman run --rm -e KCONFIG_WARN_TO_ERROR=0 -v ${PWD}:/workspace -w /workspace ${img}
-build_cmd:=${setup_cmd} west build -p auto -s zmk/app -b nice_nano@2.0.0//zmk
+.PHONY: all west-update
+all: ./build/firmware_right.uf2 ./build/firmware_left.uf2 ./build/settings_reset.uf2
 
 .west/config:
-	${setup_cmd} west init -l config
-	${setup_cmd} west update
+	$(PODMAN) west init -l config
 
-./build/firmware_%.uf2: ./config/*
-	${build_cmd} -d build/$* -- -DZephyr_DIR=/workspace/zephyr/share/zephyr-package/cmake -DZMK_CONFIG=/workspace/config -DSHIELD=keyball44_$*
-	mv ./build/$*/zephyr/zmk.uf2 $@
+west-update: .west/config
+	$(PODMAN) west update
+	touch .west/manifest-updated
 
+.west/manifest-updated: config/west.yml .west/config
+	$(PODMAN) west update
+	touch $@
+
+./build/firmware_left.uf2: .west/manifest-updated $(CONFIG_FILES) Makefile
+	$(BUILD) -d build/left -- -DZephyr_DIR=/workspace/zephyr/share/zephyr-package/cmake -DZMK_CONFIG=/workspace/config -DSHIELD=keyball44_left
+	mv build/left/zephyr/zmk.uf2 $@
+
+./build/firmware_right.uf2: .west/manifest-updated $(CONFIG_FILES) Makefile
+	$(BUILD) -d build/right -S studio-rpc-usb-uart -- -DZephyr_DIR=/workspace/zephyr/share/zephyr-package/cmake -DZMK_CONFIG=/workspace/config -DSHIELD=keyball44_right -DCONFIG_ZMK_STUDIO=y
+	mv build/right/zephyr/zmk.uf2 $@
+
+./build/settings_reset.uf2: .west/manifest-updated $(CONFIG_FILES) Makefile
+	$(BUILD) -d build/settings_reset -- -DZephyr_DIR=/workspace/zephyr/share/zephyr-package/cmake -DZMK_CONFIG=/workspace/config -DSHIELD=settings_reset
+	mv build/settings_reset/zephyr/zmk.uf2 $@

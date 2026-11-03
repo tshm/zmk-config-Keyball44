@@ -19,20 +19,37 @@ Thanks for the above contribution and *[inorichi](https://github.com/inorichi/zm
 There will be compilation failed if you using Keymap Editor, this happens due to zmk mousekey update.
 Please go to `config/keyball44.keymap` and delete this line `#include <dt-bindings/zmk/pointing.h>` every time you finish configuring the keymap in the Keymap Editor. Refer to this [link](https://xcmkb-docs.gitbook.io/doc/user-manual/keyball61-wireless#keymap-editor-dec24-compilation-error) for detailed troubleshoot.
 
+## ZMK Studio
+
+- Firmware targets upstream ZMK v0.3.0 and nice!nano v2 (`nice_nano_v2`), retaining the pinned PMW3610 driver and existing trackball tuning.
+- Connect the **right half** to USB and open [ZMK Studio](https://zmk.studio/) in Chrome/Edge or the native app. On Linux, the user needs access to the USB serial device.
+- The rightmost three keys in the **top row** still enter the bootloader (positions 9, 10, 11). The three keys immediately below them **unlock Studio** (positions 21, 22, 23). Press all three together.
+- If both Bluetooth and USB are connected, select USB output before using Studio over USB.
+- Keep the seven layers in their existing order: the trackball driver uses fixed layer indices 4/5/6. Studio can assign existing behaviors, but custom macros, combos, conditional layers, and sensor settings remain firmware-defined.
+- Studio saves keymap changes on the keyboard. Later firmware `.keymap` edits require **Restore Stock Settings** in Studio to take effect; that discards Studio keymap customizations.
+- Flash **both halves** for this firmware migration. The pre-migration configuration is preserved on GitHub as tag `pre-zmk-studio-2026-11-02`; restore matching firmware for both halves when rolling back. Settings-reset firmware clears saved settings and should only be used deliberately.
+- Physical-layout coordinate-only fixes need the right central reflashed and Studio reconnected; they do not require Restore Stock Settings or change key bindings. Thumb-key rotations use each key's own center for compatibility with the deployed Studio renderer.
+
+### Local Build
+
+Run `make` with Podman available. It updates west dependencies when `config/west.yml` changes and produces `build/firmware_right.uf2`, `build/firmware_left.uf2`, and `build/settings_reset.uf2`. Use `make west-update` to explicitly refresh dependencies.
+
+Builds start pristine when inputs change to avoid retaining the old board or missing the Studio USB snippet. Unchanged builds are skipped.
+
+After flashing both halves, verify the two right-hand combos, Studio save/power-cycle persistence, all 44 keys, trackball mouse/scroll/snipe behavior, OLED/battery reporting, and unplugged sleep/wake. A successful build does not verify hardware behavior.
+
 ## Notes
 
 ### Flashing
 
-1. If you only change the keymap, you can just flash to the master side. For Keyball series, master is on the right. That means you don’t need to flash left and right.
+1. A stock keymap-only update normally needs only the right central. If Studio has saved a keymap, use Restore Stock Settings for firmware keymap edits to take effect. Firmware/platform or hardware changes require flashing both halves.
 2. Hold the red button and double tap the green button quickly to call out the bootloader. If this cant work, unscrew the oled cover and double press the reset button twice. If double press doesn’t call out the new folder to drag your UF2, check MY COMPUTER for any new drive, or you may need to double press even faster.
 3. You don’t need to delete any files in the nicenano folder. Extract the `firmware.zip`, you will get `keyball44_right-nice_nano_v2-zmk.uf2` - drag this to the nicenano folder. Ignore and skip any errors.
 4. If left oled shows a cross button, you will need to drop `keyball44_left-nice_nano_v2-zmk.uf2` to the left too. Proceed to flash the left by following Step2 to 4. Ignore and skip any errors.
 5. This `settings_reset-nice_nano_v2-zmk.uf2` is a backup uf2 to reset everything, you dont need this unless you know what you are doing.
 6. Normally, you don’t need to re-pair after formatting. It will pair automatically.
 
-These are preset reset button for keyball44 wireless to replace the harder-to-reach physical reboot button. To activate, hold the red inner thumb key and tap the outer key twice on each side to call up the reboot folder.
-
-![reset](https://github.com/user-attachments/assets/63f2e24d-7cbc-481e-90fe-47784b63bab0)
+The three-key bootloader combo above remains available; the physical reset button is the fallback if firmware is not responding.
 
 ### Charging
 
@@ -55,7 +72,7 @@ These are preset reset button for keyball44 wireless to replace the harder-to-re
 
 ## Trackball Layer
 
-1. `Auto Mouse`: Layer 4 (moving the trackball enables it through the PMW3610 automouse layer. Non-mouse positions on layer 4 now send their normal key behavior and immediately jump back to the base layer, while click/page/scroll-entry positions stay on the mouse workflow).
+1. `Auto Mouse`: Layer 4 (moving the trackball enables it through the PMW3610 automouse layer. Non-mouse positions exit to the base layer; layer-tap holds then activate their target layer until release. Hold Space for NUM; tap Space to type a space and return to base. Click/page/scroll-entry positions stay on the mouse workflow).
 2. `Scroll`: Layer 5
 3. `Snipe`: Layer 6 (cursor moves super slow for precision)
 
