@@ -16,6 +16,7 @@
 - USB Studio is enabled only on the right central; custom behaviors and trackball configuration remain firmware-defined.
 - Battery fetching and proxying are already enabled in `keyball44.conf`; these expose the left battery to the host, not a second local OLED battery widget.
 - Keep `dt-bindings/zmk/pointing.h` out of the keymap; the editor workflow removes that obsolete include.
+- In Auto Mouse mode, holding Space exits MOUSE and keeps NUM active until release; tapping Space types a space and returns to DEFAULT. `mo_exit_aml` must exit MOUSE before activating its target layer.
 
 ## Studio Migration Invariants
 

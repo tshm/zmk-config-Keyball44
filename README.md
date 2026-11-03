@@ -72,7 +72,7 @@ The three-key bootloader combo above remains available; the physical reset butto
 
 ## Trackball Layer
 
-1. `Auto Mouse`: Layer 4 (moving the trackball enables it through the PMW3610 automouse layer. Non-mouse positions on layer 4 now send their normal key behavior and immediately jump back to the base layer, while click/page/scroll-entry positions stay on the mouse workflow).
+1. `Auto Mouse`: Layer 4 (moving the trackball enables it through the PMW3610 automouse layer. Non-mouse positions exit to the base layer; layer-tap holds then activate their target layer until release. Hold Space for NUM; tap Space to type a space and return to base. Click/page/scroll-entry positions stay on the mouse workflow).
 2. `Scroll`: Layer 5
 3. `Snipe`: Layer 6 (cursor moves super slow for precision)
 
