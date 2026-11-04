@@ -1,0 +1,4 @@
+name: zmk-keyboard-keyball44
+build:
+  settings:
+    board_root: .

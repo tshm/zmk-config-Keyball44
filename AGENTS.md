@@ -83,6 +83,7 @@ When the user requests a durable behavior change, record it here or in the relev
 - `make` uses Podman to build right, left, and settings-reset UF2s under `build/`; manifest changes refresh west dependencies automatically.
 - `make west-update` explicitly refreshes dependencies. Firmware rebuilds are pristine when inputs change; unchanged builds are skipped.
 - Studio USB transport and `CONFIG_ZMK_STUDIO` apply only to the right central in both local builds and `build.yaml`.
+- The shield is a Zephyr module under `config/keyboard/`; local builds and the local reusable Actions workflow load it through `ZMK_EXTRA_MODULES`.
 
 ## Child DOX Index
 

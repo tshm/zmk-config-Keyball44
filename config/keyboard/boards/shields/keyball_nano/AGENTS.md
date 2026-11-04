@@ -14,7 +14,7 @@
 - `keyball44_right` is central; `keyball44_left` is peripheral.
 - OLED geometry is 128 by 32 pixels.
 - Trackball layers are mouse 4, scroll 5, and snipe 6; keep them aligned with the keymap.
-- Battery sensing is inherited from the controller board, not defined by these overlays.
+- Battery sensing is inherited from the controller board. The right central enables split battery fetching and proxying; the left peripheral disables USB.
 - Keep `wakeup-source` on the shared `kscan0` matrix so keys can wake each half from idle deep sleep.
 - The selected physical layout owns the scanner and matrix transform; do not restore a chosen matrix-transform property. Physical attributes follow keymap binding order, with coordinates and angles in hundredths.
 

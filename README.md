@@ -36,7 +36,19 @@ Run `make` with Podman available. It updates west dependencies when `config/west
 
 Builds start pristine when inputs change to avoid retaining the old board or missing the Studio USB snippet. Unchanged builds are skipped.
 
+The shield lives in the Zephyr module at `config/keyboard/`; both local builds and the local reusable Actions workflow load it through `ZMK_EXTRA_MODULES`. The keymap, shared settings, and dependency manifest stay directly under `config/`.
+
 After flashing both halves, verify the two right-hand combos, Studio save/power-cycle persistence, all 44 keys, trackball mouse/scroll/snipe behavior, OLED/battery reporting, and unplugged sleep/wake. A successful build does not verify hardware behavior.
+
+### Build Warnings
+
+Project workflows use Node24-native actions without upgrading the pinned firmware dependencies. The Ubuntu runner migration notice is informational; firmware builds already pass on Ubuntu 26.04.
+
+The pinned upstream firmware still emits these warnings:
+
+- `NRF_STORE_REBOOT_TYPE_GPREGRET` is deprecated but retained for nRF52 bootloader compatibility.
+- The right-only PMW3610 module creates an empty CMake library on left/settings-reset builds.
+- The upstream settings-reset mock scanner has zero rows but a one-binding keymap, producing initializer/array-bounds warnings. Correcting this needs a focused upstream fix or durable backport and a physical settings-reset check, not warning suppression.
 
 ## Notes
 
@@ -78,10 +90,10 @@ The three-key bootloader combo above remains available; the physical reset butto
 
 ## Trackball Configuration
 
-1. To change the Scroll Layer, go to `zmk-config-Keyball44/blob/main/config/boards/shields/keyball_nano/keyball44_right.overlay`: [scroll-layers=5](https://github.com/superxc3/zmk-config-Keyball44/blob/f8baf78875826e159ae2df97b634e0c81fdea17c/config/boards/shields/keyball_nano/keyball44_right.overlay#L57). Change the number 5 to your preferred layer.
-2. To change the defaul CPI, go to `zmk-config-Keyball44/blob/main/config/boards/shields/keyball_nano/keyball44_right.conf`: [CONFIG_PMW3610_CPI=1200](https://github.com/superxc3/zmk-config-Keyball44/blob/f8baf78875826e159ae2df97b634e0c81fdea17c/config/boards/shields/keyball_nano/keyball44_right.conf#L7). Other trackball config could be changed in the same file too, eg., snipe CPI, scroll direction etc.
-3. To turn off the Auto Mouse layer, go to `config/boards/shields/keyball_nano/keyball44_right.overlay` and comment out or remove `automouse-layer = <4>;`.
-4. To change the Auto Mouse timeout, edit `CONFIG_PMW3610_AUTOMOUSE_TIMEOUT_MS=700` in `config/boards/shields/keyball_nano/keyball44_right.conf`.
+1. To change the Scroll Layer, edit `scroll-layers = <5>;` in [`config/keyboard/boards/shields/keyball_nano/keyball44_right.overlay`](config/keyboard/boards/shields/keyball_nano/keyball44_right.overlay).
+2. To change CPI, edit `CONFIG_PMW3610_CPI=1200` in [`config/keyboard/boards/shields/keyball_nano/keyball44_right.conf`](config/keyboard/boards/shields/keyball_nano/keyball44_right.conf). Snipe CPI, scroll direction, and other trackball settings live in the same file.
+3. To turn off the Auto Mouse layer, edit `config/keyboard/boards/shields/keyball_nano/keyball44_right.overlay` and comment out or remove `automouse-layer = <4>;`.
+4. To change the Auto Mouse timeout, edit `CONFIG_PMW3610_AUTOMOUSE_TIMEOUT_MS=700` in `config/keyboard/boards/shields/keyball_nano/keyball44_right.conf`.
 5. The immediate-exit behavior for non-mouse keys is defined in `config/keyball44.keymap` by the `exit_aml`, `kp_exit_aml`, `mt_exit_aml`, and `lt_exit_aml` helper behaviors.
 
 ## Default Keymap

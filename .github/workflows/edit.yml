@@ -8,10 +8,12 @@ on:
 jobs:
   edit:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - name: Remove pointing.h include
         run: sed -i '/#include <dt-bindings\/zmk\/pointing\.h>/d' config/keyball44.keymap
-      - uses: stefanzweifel/git-auto-commit-action@v5
+      - uses: stefanzweifel/git-auto-commit-action@v7
         with:
           commit_message: Remove pointing.h include

@@ -18,13 +18,13 @@ west-update: .west/config
 	touch $@
 
 ./build/firmware_left.uf2: .west/manifest-updated $(CONFIG_FILES) Makefile
-	$(BUILD) -d build/left -- -DZephyr_DIR=/workspace/zephyr/share/zephyr-package/cmake -DZMK_CONFIG=/workspace/config -DSHIELD=keyball44_left
+	$(BUILD) -d build/left -- -DZephyr_DIR=/workspace/zephyr/share/zephyr-package/cmake -DZMK_CONFIG=/workspace/config -DZMK_EXTRA_MODULES=/workspace/config/keyboard -DSHIELD=keyball44_left
 	mv build/left/zephyr/zmk.uf2 $@
 
 ./build/firmware_right.uf2: .west/manifest-updated $(CONFIG_FILES) Makefile
-	$(BUILD) -d build/right -S studio-rpc-usb-uart -- -DZephyr_DIR=/workspace/zephyr/share/zephyr-package/cmake -DZMK_CONFIG=/workspace/config -DSHIELD=keyball44_right -DCONFIG_ZMK_STUDIO=y
+	$(BUILD) -d build/right -S studio-rpc-usb-uart -- -DZephyr_DIR=/workspace/zephyr/share/zephyr-package/cmake -DZMK_CONFIG=/workspace/config -DZMK_EXTRA_MODULES=/workspace/config/keyboard -DSHIELD=keyball44_right -DCONFIG_ZMK_STUDIO=y
 	mv build/right/zephyr/zmk.uf2 $@
 
 ./build/settings_reset.uf2: .west/manifest-updated $(CONFIG_FILES) Makefile
-	$(BUILD) -d build/settings_reset -- -DZephyr_DIR=/workspace/zephyr/share/zephyr-package/cmake -DZMK_CONFIG=/workspace/config -DSHIELD=settings_reset
+	$(BUILD) -d build/settings_reset -- -DZephyr_DIR=/workspace/zephyr/share/zephyr-package/cmake -DZMK_CONFIG=/workspace/config -DZMK_EXTRA_MODULES=/workspace/config/keyboard -DSHIELD=settings_reset
 	mv build/settings_reset/zephyr/zmk.uf2 $@
