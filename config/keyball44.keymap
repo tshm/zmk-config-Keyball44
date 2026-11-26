@@ -12,6 +12,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/pointing.h>
 
 &lt {
     tapping-term-ms = <240>;
@@ -209,10 +210,10 @@
         mouse_layer {
             display-name = "MOUSE";
             bindings = <
-&kp_exit_aml TAB          &kp_exit_aml Q          &kp_exit_aml W          &kp_exit_aml E         &kp_exit_aml R        &kp_exit_aml T                            &kp_exit_aml Y        &kp_exit_aml U  &kp_exit_aml I  &kp_exit_aml O      &kp_exit_aml P    &kp_exit_aml BACKSPACE
-&lt_exit_aml 1 ESCAPE     &mt_exit_aml LWIN A     &mt_exit_aml LALT S     &mt_exit_aml LSHFT D   &mt_exit_aml LCTRL F  &kp_exit_aml G                            &kp_exit_aml H        &mkp LCLK       &lt 5 PG_UP     &mkp RCLK           &mkp MCLK         &kp_exit_aml ENTER
-&mod_exit_aml LEFT_SHIFT  &kp_exit_aml Z          &kp_exit_aml X          &kp_exit_aml C         &kp_exit_aml V        &kp_exit_aml B                            &kp_exit_aml N        &kp_exit_aml M  &kp PG_DN       &kp_exit_aml COMMA  &kp_exit_aml DOT  &mod_exit_aml LEFT_SHIFT
-&mod_exit_aml LCTRL       &mod_exit_aml LEFT_GUI  &mod_exit_aml LEFT_ALT  &lt_exit_aml 4 ESCAPE  &lt 5 LANG2                               &lt_exit_aml 2 LANG1  &lt_exit_aml 1 SPACE                                                                        &mod_exit_aml RIGHT_ALT
+&kp_exit_aml TAB          &kp_exit_aml Q          &kp_exit_aml W          &kp_exit_aml E         &kp_exit_aml R        &kp_exit_aml T                            &kp_exit_aml Y        &kp_exit_aml U  &kp_exit_aml I  &kp_exit_aml O  &kp_exit_aml P    &kp_exit_aml BACKSPACE
+&lt_exit_aml 1 ESCAPE     &mt_exit_aml LWIN A     &mt_exit_aml LALT S     &mt_exit_aml LSHFT D   &mt_exit_aml LCTRL F  &kp_exit_aml G                            &kp_exit_aml H        &mkp LCLK       &lt 5 PG_UP     &mkp RCLK       &mkp MCLK         &kp_exit_aml ENTER
+&mod_exit_aml LEFT_SHIFT  &kp_exit_aml Z          &kp_exit_aml X          &kp_exit_aml C         &kp_exit_aml V        &kp_exit_aml B                            &kp_exit_aml N        &kp K_BACK      &kp PG_DN       &kp K_FORWARD   &kp_exit_aml DOT  &mod_exit_aml LEFT_SHIFT
+&mod_exit_aml LCTRL       &mod_exit_aml LEFT_GUI  &mod_exit_aml LEFT_ALT  &lt_exit_aml 4 ESCAPE  &lt 5 LANG2                               &lt_exit_aml 2 LANG1  &lt_exit_aml 1 SPACE                                                                    &mod_exit_aml RIGHT_ALT
             >;
         };
 
